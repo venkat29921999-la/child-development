@@ -25,9 +25,18 @@ img{max-width:100%;display:block;}
   display:flex;align-items:center;justify-content:space-between;
   padding:22px 40px;
 }
-.logo{display:flex;align-items:center;gap:9px;font-family:var(--ff-display);font-weight:700;font-size:1.3rem;color:var(--navy);}
-.logo i{color:var(--coral);font-size:1.45rem;}
-.logo em{color:var(--coral);font-style:normal;font-size:1.05rem;}
+.logo{display:flex;align-items:center;height: 40px;}
+.logo img{
+height: 90px;
+  max-width:220px;
+  width:auto;
+  object-fit:contain;
+  transition:transform .35s var(--ease);
+  /* Recolors the logo toward the brand forest green (#1F3A2E) so it's visible on the cream background */
+  filter:brightness(0) saturate(100%) invert(14%) sepia(43%) saturate(1196%) hue-rotate(108deg) brightness(94%) contrast(94%);
+}
+.logo a{display:inline-flex;align-items:center;}
+.logo:hover img{transform:scale(1.06);}
 .back-home{
   display:flex;align-items:center;gap:8px;font-weight:700;font-size:0.92rem;
   color:var(--navy);background:#fff;padding:10px 18px;border-radius:50px;box-shadow:var(--shadow);

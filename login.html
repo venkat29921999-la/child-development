@@ -14,8 +14,7 @@
 <!-- MINI NAVBAR -->
 <header class="auth-navbar">
   <a href="index.html" class="logo">
-    <i class="fa-solid fa-seedling"></i>
-    <span>Stack<em>&amp;</em>Ly</span>
+     <img src="Assest/stacklylogo (1).webp" alt="Logo">
   </a>
   <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> Back to site</a>
 </header>
@@ -26,18 +25,18 @@
 
   <!-- ROLE SELECT -->
   <div class="role-select" id="roleSelect" data-animate="fade-up">
-    <span class="eyebrow"><i class="fa-solid fa-user-group"></i> Welcome to Stack &amp; Ly</span>
+    <span class="eyebrow"><i class="fa-solid fa-user-group"></i> Welcome to Stackly</span>
     <h2>Continue as...</h2>
     <p class="role-sub">Choose how you'd like to sign in. You can always switch later.</p>
     <div class="role-grid">
-      <button class="role-card" data-role="user">
+      <button class="role-card" data-role="user" type="button">
         <img src="Assest/child3.webp" alt="Parent">
         <div class="role-icon"><i class="fa-solid fa-user"></i></div>
         <h3>Parent / User</h3>
         <p>Track your child's milestones and explore activities.</p>
         <span class="role-cta">Continue <i class="fa-solid fa-arrow-right"></i></span>
       </button>
-      <button class="role-card" data-role="admin">
+      <button class="role-card" data-role="admin" type="button">
         <img src="Assest/shop25.webp" alt="Admin">
         <div class="role-icon admin-icon"><i class="fa-solid fa-user-shield"></i></div>
         <h3>Admin / Specialist</h3>
@@ -49,7 +48,7 @@
 
   <!-- AUTH CARD -->
   <div class="auth-card" id="authCard" data-animate="fade-up">
-    <button class="auth-back" id="authBack"><i class="fa-solid fa-arrow-left"></i> Change role</button>
+    <button class="auth-back" id="authBack" type="button"><i class="fa-solid fa-arrow-left"></i> Change role</button>
 
     <!-- IMAGE SIDE -->
     <div class="auth-media">
@@ -72,28 +71,28 @@
       <span class="role-badge" id="roleBadge"><i class="fa-solid fa-user"></i> Signing in as Parent / User</span>
 
       <div class="auth-tabs">
-        <button class="auth-tab active" data-target="login">Log In</button>
-        <button class="auth-tab" data-target="signup">Sign Up</button>
+        <button class="auth-tab active" data-target="login" type="button">Log In</button>
+        <button class="auth-tab" data-target="signup" type="button">Sign Up</button>
       </div>
 
       <!-- LOGIN FORM -->
-      <form class="auth-form active" id="login">
+      <form class="auth-form active" id="login" novalidate>
         <h2>Welcome back</h2>
         <p class="auth-sub">Log in to continue your child's growth journey.</p>
 
         <div class="social-row">
-         <button type="button" class="social-btn"><i class="fa-brands fa-google"></i><a href="404.html">Google </a></button>
-          <button type="button" class="social-btn"><i class="fa-brands fa-apple"></i><a href="404.html">Apple</a></button>
+         <button type="button" class="social-btn"><i class="fa-brands fa-google"></i> Google</button>
+          <button type="button" class="social-btn"><i class="fa-brands fa-apple"></i> Apple</button>
         </div>
         <div class="divider"><span>or log in with email</span></div>
 
         <label>Email address
-          <div class="input-icon"><i class="fa-solid fa-envelope"></i><input type="email" placeholder="you@example.com" required></div>
+          <div class="input-icon"><i class="fa-solid fa-envelope"></i><input type="email" name="loginEmail" placeholder="you@example.com" required></div>
         </label>
         <label>Password
           <div class="input-icon">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Enter your password" required>
+            <input type="password" name="loginPassword" placeholder="Enter your password" required>
             <i class="fa-solid fa-eye toggle-pass"></i>
           </div>
         </label>
@@ -103,31 +102,31 @@
           <a href="404.html" class="link-muted">Forgot password?</a>
         </div>
 
-        <button type="submit" class="btn btn-primary full-width"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In</button>
-        <p class="auth-switch">Don't have an account? <a href="404.html" class="switch-to" data-target="signup">Sign up free</a></p>
+        <button type="button" id="loginSubmitBtn" class="btn btn-primary full-width"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In</button>
+        <p class="auth-switch">Don't have an account? <a href="#" class="switch-to" data-target="signup">Sign up free</a></p>
       </form>
 
       <!-- SIGNUP FORM -->
-      <form class="auth-form" id="signup">
+      <form class="auth-form" id="signup" novalidate>
         <h2>Create your account</h2>
         <p class="auth-sub">Start your free month — no card required.</p>
 
         <div class="social-row">
-          <button type="button" class="social-btn"><i class="fa-brands fa-google"></i><a href="404.html">Google</a></button>
-          <button type="button" class="social-btn"><i class="fa-brands fa-apple"></i><a href="404.html">Apple</a></button>
+          <button type="button" class="social-btn"><i class="fa-brands fa-google"></i> Google</button>
+          <button type="button" class="social-btn"><i class="fa-brands fa-apple"></i> Apple</button>
         </div>
         <div class="divider"><span>or sign up with email</span></div>
 
         <label>Full name
-          <div class="input-icon"><i class="fa-solid fa-user"></i><input type="text" placeholder="Your full name" required></div>
+          <div class="input-icon"><i class="fa-solid fa-user"></i><input type="text" name="signupName" placeholder="Your full name" required></div>
         </label>
         <label>Email address
-          <div class="input-icon"><i class="fa-solid fa-envelope"></i><input type="email" placeholder="you@example.com" required></div>
+          <div class="input-icon"><i class="fa-solid fa-envelope"></i><input type="email" name="signupEmail" placeholder="you@example.com" required></div>
         </label>
         <label>Password
           <div class="input-icon">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Create a password" required>
+            <input type="password" name="signupPassword" placeholder="Create a password" required>
             <i class="fa-solid fa-eye toggle-pass"></i>
           </div>
         </label>
@@ -156,9 +155,9 @@
           </div>
         </label>
 
-        <label class="checkbox terms"><input type="checkbox" required> I agree to the <a href="404.html">Terms</a> &amp; <a href="404.html">Privacy Policy</a></label>
+        <label class="checkbox terms"><input type="checkbox" id="termsCheckbox" required> I agree to the <a href="404.html">Terms</a> &amp; <a href="404.html">Privacy Policy</a></label>
 
-        <button type="submit" class="btn btn-primary full-width"><i class="fa-solid fa-rocket"></i> Create Free Account</button>
+        <button type="button" id="signupSubmitBtn" class="btn btn-primary full-width"><i class="fa-solid fa-rocket"></i> Create Free Account</button>
         <p class="auth-switch">Already have an account? <a href="#" class="switch-to" data-target="login">Log in</a></p>
       </form>
 
