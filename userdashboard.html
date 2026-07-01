@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard | Sprout & Sage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="dashboard-style.css">
+</head>
+<body class="dash-body">
+
+<!-- MOBILE TOPBAR -->
+<header class="dash-topbar">
+  <button class="dash-hamburger" id="dashHamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <a href="index.html" class="logo"><i class="fa-solid fa-seedling"></i><span>Stack<em>&amp;</em>Sage</span></a>
+  <div class="topbar-right">
+    <button class="icon-btn"><i class="fa-solid fa-bell"></i><span class="dot"></span></button>
+    <img class="topbar-avatar" src="Assest/child3.webp" alt="Parent avatar">
+  </div>
+</header>
+
+<div class="dash-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <a href="index.html" class="logo"><i class="fa-solid fa-seedling"></i><span>Stack<em>&amp;</em>Ly</span></a>
+      <button class="sidebar-close" id="sidebarClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#overview" class="side-link active"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+      <a href="#activities" class="side-link"><i class="fa-solid fa-puzzle-piece"></i> Activities</a>
+      <a href="#milestones" class="side-link"><i class="fa-solid fa-flag-checkered"></i> Milestones</a>
+      <a href="#specialists" class="side-link"><i class="fa-solid fa-user-doctor"></i> Specialists</a>
+      <a href="#messages" class="side-link"><i class="fa-solid fa-comments"></i> Messages</a>
+      <a href="#settings" class="side-link"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+    <a href="login.html" class="logout-link"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- MAIN -->
+  <main class="dash-main">
+
+    <!-- GREETING -->
+    <div class="dash-greeting" id="overview" data-animate="fade-up">
+      <div>
+        <span class="eyebrow"><i class="fa-solid fa-sun"></i> Welcome back</span>
+        <h1>Hi Anika, here's how Aria is growing 🌱</h1>
+        <p>You're 4 days into a 7-day activity streak — keep it going!</p>
+      </div>
+      <img class="greeting-img" src="Assest/child1.webp" alt="Child">
+    </div>
+
+    <!-- STAT CARDS -->
+    <div class="stat-cards">
+      <div class="dstat-card" data-animate="fade-up" data-delay="0">
+        <div class="dstat-icon icon-coral"><i class="fa-solid fa-fire"></i></div>
+        <div><h3><span class="counter" data-count="4">0</span> days</h3><p>Activity streak</p></div>
+      </div>
+      <div class="dstat-card" data-animate="fade-up" data-delay="1">
+        <div class="dstat-icon icon-sky"><i class="fa-solid fa-flag-checkered"></i></div>
+        <div><h3><span class="counter" data-count="18">0</span></h3><p>Milestones reached</p></div>
+      </div>
+      <div class="dstat-card" data-animate="fade-up" data-delay="2">
+        <div class="dstat-icon icon-sun"><i class="fa-solid fa-puzzle-piece"></i></div>
+        <div><h3><span class="counter" data-count="62">0</span></h3><p>Activities completed</p></div>
+      </div>
+      <div class="dstat-card" data-animate="fade-up" data-delay="3">
+        <div class="dstat-icon icon-mint"><i class="fa-solid fa-comments"></i></div>
+        <div><h3><span class="counter" data-count="3">0</span></h3><p>Specialist replies</p></div>
+      </div>
+    </div>
+
+    <div class="dash-grid">
+
+      <!-- WEEKLY ACTIVITIES -->
+      <section class="dash-card span-2" id="activities" data-animate="fade-up">
+        <div class="dash-card-head">
+          <h2><i class="fa-solid fa-calendar-week"></i> This Week's Activities</h2>
+          <span class="tag">Language Lab</span>
+        </div>
+        <ul class="activity-list">
+          <li class="done">
+            <div class="act-icon icon-coral"><i class="fa-solid fa-book-open"></i></div>
+            <div class="act-info"><h4>Storytime: Animal Sounds</h4><p>10 min · Language Lab</p></div>
+            <i class="fa-solid fa-circle-check act-check"></i>
+          </li>
+          <li class="done">
+            <div class="act-icon icon-sky"><i class="fa-solid fa-shapes"></i></div>
+            <div class="act-info"><h4>Shape Sorting Challenge</h4><p>12 min · Cognitive Play</p></div>
+            <i class="fa-solid fa-circle-check act-check"></i>
+          </li>
+          <li class="active">
+            <div class="act-icon icon-sun"><i class="fa-solid fa-person-running"></i></div>
+            <div class="act-info"><h4>Balance Beam Hop</h4><p>8 min · Motor Movement</p></div>
+            <button class="btn-mini"><a href="404.html">Start</a></button>
+          </li>
+          <li>
+            <div class="act-icon icon-mint"><i class="fa-solid fa-handshake-angle"></i></div>
+            <div class="act-info"><h4>Sharing Circle Game</h4><p>15 min · Social &amp; Emotional</p></div>
+            <span class="upcoming-tag">Upcoming</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- NEXT SPECIALIST SESSION -->
+      <section class="dash-card" id="specialists" data-animate="fade-up" data-delay="1">
+        <div class="dash-card-head"><h2><i class="fa-solid fa-user-doctor"></i> Specialist Session</h2></div>
+        <div class="specialist-block">
+          <img src="Assest/child13.webp" alt="Specialist">
+          <h4>Dr. Meera Subramaniam</h4>
+          <span class="team-role">Speech &amp; Language Specialist</span>
+          <p class="session-time"><i class="fa-solid fa-calendar"></i> Thu, Jul 2 · 5:00 PM</p>
+          <button class="btn btn-primary full-width"><i class="fa-solid fa-video"></i> <a href="404.html">Join Session</a></button>
+        </div>
+      </section>
+
+      <!-- MILESTONE PROGRESS -->
+      <section class="dash-card span-2" id="milestones" data-animate="fade-up">
+        <div class="dash-card-head"><h2><i class="fa-solid fa-chart-line"></i> Developmental Progress</h2></div>
+        <div class="progress-rows">
+          <div class="progress-row">
+            <span><i class="fa-solid fa-brain"></i> Cognitive Play</span>
+            <div class="bar"><div class="bar-fill" style="--val:82%;background:var(--coral);"></div></div>
+            <strong>82%</strong>
+          </div>
+          <div class="progress-row">
+            <span><i class="fa-solid fa-comments"></i> Language Lab</span>
+            <div class="bar"><div class="bar-fill" style="--val:91%;background:var(--sky);"></div></div>
+            <strong>91%</strong>
+          </div>
+          <div class="progress-row">
+            <span><i class="fa-solid fa-person-running"></i> Motor Movement</span>
+            <div class="bar"><div class="bar-fill" style="--val:68%;background:var(--sun);"></div></div>
+            <strong>68%</strong>
+          </div>
+          <div class="progress-row">
+            <span><i class="fa-solid fa-handshake-angle"></i> Social &amp; Emotional</span>
+            <div class="bar"><div class="bar-fill" style="--val:75%;background:var(--mint);"></div></div>
+            <strong>75%</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- MESSAGES -->
+      <section class="dash-card" id="messages" data-animate="fade-up" data-delay="1">
+        <div class="dash-card-head"><h2><i class="fa-solid fa-comments"></i> Messages</h2></div>
+        <ul class="message-list">
+          <li>
+            <img src="Assest/child13.webp" alt="Specialist">
+            <div><h4>Dr. Meera S.</h4><p>"Aria's doing great with two-word phrases!"</p></div>
+          </li>
+          <li>
+            <img src="Assest/child12.webp" alt="Specialist">
+            <div><h4>David O.</h4><p>"Try the balance beam activity outdoors today."</p></div>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- SETTINGS -->
+    <section class="dash-card" id="settings" data-animate="fade-up">
+      <div class="dash-card-head"><h2><i class="fa-solid fa-gear"></i> Account Settings</h2></div>
+      <div class="settings-grid">
+        <label>Parent name<input type="text" value="Anika Rao"></label>
+        <label>Email<input type="email" value="anika@example.com"></label>
+        <label>Child's name<input type="text" value="Aria"></label>
+        <label>Child's age group
+          <select>
+            <option selected>1–3 years</option>
+            <option>0–1 year</option>
+            <option>3–5 years</option>
+            <option>5–7 years</option>
+          </select>
+        </label>
+      </div>
+      <button class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Save Changes</button>
+    </section>
+
+  </main>
+</div>
+
+<script src="dashboard-script.js"></script>
+</body>
+</html>

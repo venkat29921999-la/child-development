@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | Sprout & Sage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="dashboard-style.css">
+</head>
+<body class="dash-body">
+
+<!-- MOBILE TOPBAR -->
+<header class="dash-topbar">
+  <button class="dash-hamburger" id="dashHamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <a href="index.html" class="logo"><i class="fa-solid fa-seedling"></i><span>Stack<em>&amp;</em>Ly</span></a>
+  <div class="topbar-right">
+    <button class="icon-btn"><i class="fa-solid fa-bell"></i><span class="dot"></span></button>
+    <img class="topbar-avatar" src="Assest/shop25.webp" alt="Admin avatar">
+  </div>
+</header>
+
+<div class="dash-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar admin-sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <a href="index.html" class="logo"><i class="fa-solid fa-seedling"></i><span>Stack<em>&amp;</em>Ly</span></a>
+      <button class="sidebar-close" id="sidebarClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#overview" class="side-link active"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+      <a href="#families" class="side-link"><i class="fa-solid fa-people-roof"></i> Families</a>
+      <a href="#specialist-requests" class="side-link"><i class="fa-solid fa-user-doctor"></i> Specialists</a>
+      <a href="#programs" class="side-link"><i class="fa-solid fa-shapes"></i> Programs</a>
+      <a href="#reports" class="side-link"><i class="fa-solid fa-chart-pie"></i> Reports</a>
+      <a href="#settings" class="side-link"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+    <a href="login.html" class="logout-link"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- MAIN -->
+  <main class="dash-main">
+
+    <!-- GREETING -->
+    <div class="dash-greeting admin-greeting" id="overview" data-animate="fade-up">
+      <div>
+        <span class="eyebrow eyebrow-dark"><i class="fa-solid fa-user-shield"></i> Admin Console</span>
+        <h1>Welcome back, David 👋</h1>
+        <p>Here's how Sprout &amp; Sage is performing today.</p>
+      </div>
+      <img class="greeting-img" src="Assest/child12.webp" alt="Admin">
+    </div>
+
+    <!-- STAT CARDS -->
+    <div class="stat-cards">
+      <div class="dstat-card" data-animate="fade-up" data-delay="0">
+        <div class="dstat-icon icon-coral"><i class="fa-solid fa-people-roof"></i></div>
+        <div><h3><span class="counter" data-count="12480">0</span></h3><p>Total families</p></div>
+      </div>
+      <div class="dstat-card" data-animate="fade-up" data-delay="1">
+        <div class="dstat-icon icon-sky"><i class="fa-solid fa-user-doctor"></i></div>
+        <div><h3><span class="counter" data-count="64">0</span></h3><p>Active specialists</p></div>
+      </div>
+      <div class="dstat-card" data-animate="fade-up" data-delay="2">
+        <div class="dstat-icon icon-sun"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <div><h3>₹<span class="counter" data-count="842">0</span>K</h3><p>Revenue this month</p></div>
+      </div>
+      <div class="dstat-card" data-animate="fade-up" data-delay="3">
+        <div class="dstat-icon icon-mint"><i class="fa-solid fa-arrow-trend-up"></i></div>
+        <div><h3><span class="counter" data-count="94">0</span>%</h3><p>Retention rate</p></div>
+      </div>
+    </div>
+
+    <div class="dash-grid">
+
+      <!-- RECENT SIGNUPS -->
+      <section class="dash-card span-2" id="families" data-animate="fade-up">
+        <div class="dash-card-head">
+          <h2><i class="fa-solid fa-people-roof"></i> Recent Family Signups</h2>
+          <span class="tag">Last 7 days</span>
+        </div>
+        <div class="table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Family</th><th>Plan</th><th>Child Age</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="cell-user"><img src="Assest/child3.webp" alt=""> Anika Rao</td>
+                <td>Sage</td><td>1–3 yrs</td><td><span class="status active">Active</span></td>
+              </tr>
+              <tr>
+                <td class="cell-user"><img src="Assest/child2.webp" alt=""> Priya Nair</td>
+                <td>Sprout</td><td>3–5 yrs</td><td><span class="status active">Active</span></td>
+              </tr>
+              <tr>
+                <td class="cell-user"><img src="Assest/shop15.webp" alt=""> Karan Mehta</td>
+                <td>Sage Family</td><td>0–1 yr</td><td><span class="status pending">Trial</span></td>
+              </tr>
+              <tr>
+                <td class="cell-user"><img src="Assest/child4.webp" alt=""> Sara Joseph</td>
+                <td>Sage</td><td>5–7 yrs</td><td><span class="status inactive">Paused</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SPECIALIST REQUESTS -->
+      <section class="dash-card" id="specialist-requests" data-animate="fade-up" data-delay="1">
+        <div class="dash-card-head"><h2><i class="fa-solid fa-user-doctor"></i> Specialist Requests</h2></div>
+        <ul class="message-list">
+          <li>
+            <img src="Assest/child13.webp" alt="Specialist">
+            <div><h4>Dr. Meera S.</h4><p>Requesting approval for new curriculum module.</p></div>
+          </li>
+          <li>
+            <img src="Assest/child12.webp" alt="Specialist">
+            <div><h4>David O.</h4><p>Applied to join the Motor Movement specialist pool.</p></div>
+          </li>
+          <li>
+            <img src="Assest/shop25.webp" alt="Specialist">
+            <div><h4>Anika R.</h4><p>Submitted weekly session notes for review.</p></div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- PROGRAM PERFORMANCE -->
+      <section class="dash-card span-2" id="programs" data-animate="fade-up">
+        <div class="dash-card-head"><h2><i class="fa-solid fa-shapes"></i> Program Performance</h2></div>
+        <div class="progress-rows">
+          <div class="progress-row">
+            <span><i class="fa-solid fa-brain"></i> Cognitive Play</span>
+            <div class="bar"><div class="bar-fill" style="--val:88%;background:var(--coral);"></div></div>
+            <strong>88%</strong>
+          </div>
+          <div class="progress-row">
+            <span><i class="fa-solid fa-comments"></i> Language Lab</span>
+            <div class="bar"><div class="bar-fill" style="--val:95%;background:var(--sky);"></div></div>
+            <strong>95%</strong>
+          </div>
+          <div class="progress-row">
+            <span><i class="fa-solid fa-person-running"></i> Motor Movement</span>
+            <div class="bar"><div class="bar-fill" style="--val:71%;background:var(--sun);"></div></div>
+            <strong>71%</strong>
+          </div>
+          <div class="progress-row">
+            <span><i class="fa-solid fa-handshake-angle"></i> Social &amp; Emotional</span>
+            <div class="bar"><div class="bar-fill" style="--val:79%;background:var(--mint);"></div></div>
+            <strong>79%</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- REPORTS -->
+      <section class="dash-card" id="reports" data-animate="fade-up" data-delay="1">
+        <div class="dash-card-head"><h2><i class="fa-solid fa-chart-pie"></i> Quick Reports</h2></div>
+        <ul class="report-list">
+          <li><i class="fa-solid fa-file-arrow-down"></i><a href="404.html">Monthly Revenue Report</a> <span>PDF</span></li>
+          <li><i class="fa-solid fa-file-arrow-down"></i> <a href="404.html">Family Engagement Summary</a> <span>XLS</span></li>
+          <li><i class="fa-solid fa-file-arrow-down"></i> <a href="404.html">Specialist Activity Log</a> <span>PDF</span></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- SETTINGS -->
+    <section class="dash-card" id="settings" data-animate="fade-up">
+      <div class="dash-card-head"><h2><i class="fa-solid fa-gear"></i> Admin Settings</h2></div>
+      <div class="settings-grid">
+        <label>Admin name<input type="text" value="David Oyelaran"></label>
+        <label>Email<input type="email" value="david@sproutsage.com"></label>
+        <label>Role<input type="text" value="Head of Child Psychology" disabled></label>
+        <label>Notification preference
+          <select>
+            <option selected>Daily summary</option>
+            <option>Real-time alerts</option>
+            <option>Weekly digest</option>
+          </select>
+        </label>
+      </div>
+      <button class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Save Changes</button>
+    </section>
+
+  </main>
+</div>
+
+<script src="dashboard-script.js"></script>
+</body>
+</html>
