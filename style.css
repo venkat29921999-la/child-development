@@ -254,6 +254,15 @@ height: 90px;
   font-weight:600;font-size:0.95rem;color:var(--navy);position:relative;padding:6px 0;
   transition:color .25s ease;
 }
+
+/* Active Menu */
+.nav-links a.active{
+    color:var(--coral-dark);
+}
+
+.nav-links a.active::after{
+    width:100%;
+}
 .nav-links a:not(.nav-cta)::after{
   content:'';position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--coral);
   transition:width .3s ease;
